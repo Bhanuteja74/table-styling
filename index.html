@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Table Styling</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgba(0, 0, 0, 0.8);
+        margin-bottom: 20px;
+        font-size: 20px;
+        word-spacing: 1px;
+        letter-spacing: 0.6px;
+        line-height: 26px;
+      }
+
+      body {
+        background-color: rgba(0, 0, 0, 0.06);
+        width: 60%;
+        margin: auto;
+      }
+
+      header {
+        padding: 20px;
+        height: 100px;
+        text-align: center;
+      }
+
+      header > h1 {
+        font-size: 40px;
+      }
+
+      header > nav > a {
+        font-size: 16px;
+        padding: 0 20px;
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover {
+          color: #000;
+          font-size: 18px;
+        }
+      }
+
+      section {
+        padding: 20px 0;
+      }
+
+      section > h2 {
+        text-decoration: underline;
+        font-size: 28px;
+      }
+
+      summary {
+        font-weight: 900;
+      }
+
+      details > p,
+      embed {
+        padding: 0px 20px;
+      }
+
+      embed {
+        width: 100%;
+        height: 300px;
+      }
+
+      #my-practices > a {
+        background-color: rgba(0, 0, 0, 0.2);
+        display: inline-block;
+        width: 170px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 900;
+        padding: 20px 40px;
+        margin: 20px 40px;
+        border-radius: 14px;
+      }
+
+      #my-practices > a:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Table Designs and Styling</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#general-rules">General Rules</a>
+        <a href="#my-practices">My Practices</a>
+        <a href="#learnings">Learnings</a>
+      </nav>
+    </header>
+    <p>
+      Tables have got to be one of the most difficult objects to style in the
+      Web. Some simple CSS implemented tables.
+    </p>
+
+    <section id="general-rules">
+      <h2>General Thumb rules for table styling</h2>
+
+      <h3>Table loves space</h3>
+      <p>
+        Set the width of tables carefully, according to the content. If you
+        don't know the perfect width, simply set the width of the table to 100%.
+        Tables look nicer when they have "overwidth", and when it comes to
+        tables too much width is definitely better than too little width.
+      </p>
+
+      <h3>Cells need some padding</h3>
+      <p>
+        Sure, each table cell relates to each other. But it doesn't mean that we
+        have to pull them too close, right? Define some space between the cells,
+        crammed up table cells are so much harder to read.
+      </p>
+
+      <h3>Treat tables the way you treat content</h3>
+      <p>
+        Tables are read similarly to the way we read text — except it's harder
+        and it takes more time to read a table. So be careful with the amount of
+        contrast you are giving to your table. Use soft colors — it's easier for
+        the eyes. Don't treat your table like it's a graphical decoration. Make
+        sure that the style you apply to it makes the content more readable, not
+        the other way around.
+      </p>
+    </section>
+
+    <section id="my-practices">
+      <h2>My Practices</h2>
+
+      <a href="./src/horizontal-table.html" target="_blank">Horizontal Table</a>
+      <a href="./src/vertical-table.html" target="_blank">Vertical Table</a>
+      <a href="./src/boxTable.html" target="_blank">Box Table</a>
+    </section>
+
+    <section id="learnings">
+      <h2>Learnings</h2>
+      <details>
+        <summary>Horizontal Minimalist</summary>
+        <p>
+          Horizontal tables are tables that are read rather horizontally than
+          vertically. Each entity is represented by a row. You can style these
+          types of tables with minimalist style
+        </p>
+        <p>
+          Simply set enough padding to the cells (td and th) and put a 2 pixel
+          border underneath the header.
+        </p>
+
+        <embed src="./src/horizontal-minimalist.html" type="text/html" />
+
+        <p>
+          Because horizontal tables are supposed to be scanned horizontally,
+          clearing the border of the table increases the efficiency of the
+          table. The lack of border, however, makes this table design hard to
+          read if it has too many rows. To counter it we simply add 1 pixel
+          border underneath all td elements
+        </p>
+      </details>
+
+      <details>
+        <summary>Vertical Minimalist</summary>
+        <p>
+          Although rarely used, vertically oriented tables are useful for
+          categorizing or comparing descriptions of objects, with each entity
+          represented by a column. We can style it in minimalistic style by
+          adding whitespace separators between columns
+        </p>
+
+        <embed src="./src/vertical-minimalist.html" type="text/html" />
+
+        <p>
+          Add large border-left and border-right with the same color as
+          background. You can use transparent borders if you want
+        </p>
+      </details>
+
+      <details>
+        <summary>Box</summary>
+        <p>
+          The most dependable of all styles, the box style works for all kinds
+          of tables. Pick a good color scheme and then distribute
+          background-color to all the cells. Don't forget to accentuate the
+          differences of each cell by defining border as a separator. An example
+          of a box style table is the following table
+        </p>
+
+        <embed src="./src/box-table.html" type="text/html" />
+
+        <p>
+          This style is nowadays probably the most used style. The tricky part
+          is actually trying to find the color scheme that matches with your
+          site. If your site is heavy on graphics, it will be pretty hard to use
+          this style.
+        </p>
+      </details>
+
+      <details>
+        <summary>Horizontal Zebra</summary>
+        <p>
+          Zebra-tables are pretty attractive and usable. The alternating
+          background color can serve as a visual cue for people when scanning
+          the table. To style a table as zebra, simply put a class="odd" to
+          every odd ordered tr tag and define a style for it
+        </p>
+
+        <embed src="./src/horizontal-zebre.html" type="text/html" />
+      </details>
+    </section>
+  </body>
+</html>
