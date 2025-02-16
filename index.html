@@ -25,15 +25,18 @@
         padding: 20px;
         height: 100px;
         text-align: center;
+        background-color: rgba(0, 0, 0, 0.08);
       }
 
       header > h1 {
+        padding-top: 6px;
         font-size: 40px;
       }
 
       header > nav > a {
         font-size: 16px;
-        padding: 0 20px;
+        width: 140px;
+        padding: 10px 10px 0px;
         display: inline-block;
         text-decoration: none;
 
@@ -76,11 +79,16 @@
         padding: 20px 40px;
         margin: 20px 40px;
         border-radius: 14px;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+          color: #eee;
+        }
       }
 
-      #my-practices > a:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-        color: #eee;
+      span {
+        background-color: rgba(0, 0, 0, 0.16);
+        padding: 2px 6px;
       }
     </style>
   </head>
@@ -105,7 +113,8 @@
       <h3>Table loves space</h3>
       <p>
         Set the width of tables carefully, according to the content. If you
-        don't know the perfect width, simply set the width of the table to 100%.
+        don't know the perfect width, simply set the
+        <span>width</span> of the <span>table</span> to <span>100%</span>.
         Tables look nicer when they have "overwidth", and when it comes to
         tables too much width is definitely better than too little width.
       </p>
@@ -113,8 +122,9 @@
       <h3>Cells need some padding</h3>
       <p>
         Sure, each table cell relates to each other. But it doesn't mean that we
-        have to pull them too close, right? Define some space between the cells,
-        crammed up table cells are so much harder to read.
+        have to pull them too close, right? Define some
+        <span>space</span> between the cells, crammed up table cells are so much
+        harder to read.
       </p>
 
       <h3>Treat tables the way you treat content</h3>
@@ -146,8 +156,8 @@
           types of tables with minimalist style
         </p>
         <p>
-          Simply set enough padding to the cells (td and th) and put a 2 pixel
-          border underneath the header.
+          Simply set enough <span>padding</span> to the cells (<span>td</span>
+          and <span>th</span>) and put a 2 pixel border underneath the header.
         </p>
 
         <embed src="./src/horizontal-minimalist.html" type="text/html" />
@@ -173,8 +183,9 @@
         <embed src="./src/vertical-minimalist.html" type="text/html" />
 
         <p>
-          Add large border-left and border-right with the same color as
-          background. You can use transparent borders if you want
+          Add large <span>border-left</span> and <span>border-right</span> with
+          the same color as background. You can use transparent borders if you
+          want.
         </p>
       </details>
 
@@ -183,9 +194,10 @@
         <p>
           The most dependable of all styles, the box style works for all kinds
           of tables. Pick a good color scheme and then distribute
-          background-color to all the cells. Don't forget to accentuate the
-          differences of each cell by defining border as a separator. An example
-          of a box style table is the following table
+          <span>background-color</span> to all the cells. Don't forget to
+          accentuate the differences of each cell by defining
+          <span>border</span> as a separator. An example of a box style table is
+          the following table
         </p>
 
         <embed src="./src/box-table.html" type="text/html" />
@@ -203,8 +215,8 @@
         <p>
           Zebra-tables are pretty attractive and usable. The alternating
           background color can serve as a visual cue for people when scanning
-          the table. To style a table as zebra, simply put a class="odd" to
-          every odd ordered tr tag and define a style for it
+          the table. To style a table as zebra, simply using Pseudo-classe
+          <span>nth-child()</span>
         </p>
 
         <embed src="./src/horizontal-zebre.html" type="text/html" />
